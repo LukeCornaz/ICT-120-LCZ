@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>The last of la fin</h1>
+    <h2>Tes essaies :</h2>
+</body>
+<script>
+    console.log("Bienvenu pour le jeu tro coule");
+    alert("Le jeu qui suit il est trop coule");
+    nombre = Math.floor(Math.random()*100)
+    essaie = 0;
+    cache = 0;
+
+    do {
+        cache = prompt("choisi ou t maur")
+        essaie++
+        document.write("Essaie " + essaie + " : " + cache + "<br>")
+        if (cache > nombre) {
+            alert("C'est grand là");
+        }
+        if (cache < nombre) {
+            alert("Tu refroidi tellement le chifre est petit");
+        }
+        if (cache == nombre) {
+            alert("gagné !")
+        }
+    } while (cache != nombre);
+
+
+</script>
+</html>
