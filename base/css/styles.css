@@ -1,0 +1,21 @@
+body {
+    background-color: deeppink;
+    text-align: center;
+}
+h1{
+    background-color: chocolate;
+}
+html {
+    font-size: xx-large;
+}
+.hidden {
+    display: none;
+}
+
+#lblTitre {
+    font-size: 100px;
+    font-palette: light;
+}
+#NARUTO {
+    display: none;
+}

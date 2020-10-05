@@ -1,0 +1,23 @@
+#titre {
+    position: absolute;
+    top: 10px;
+    right: 850px;
+}
+#logo {
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#paysage {
+    background-image: url('../php/pictures/paysage.jpg');
+    margin-top: 10px;
+    height: 300px;
+}
+.flexbox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#body{
+    background-color: #f3d9ff;
+}
