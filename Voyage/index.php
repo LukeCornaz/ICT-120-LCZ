@@ -24,7 +24,7 @@
 
 Cette page rassemble toutes les informations nécessaires pour l'organisation de notre voyage d'étude en troisième année.
 <form method="post">
-    <div class="d-none">
+    <div id="divParticipants" class="d-none">
         Les gens:<br>
         Adresse:<input type="text" id="txtAddress00" name="txtAddress[00]">Code postal:<input type="text" id="txtNPA00" name="txtNPA[00]">Ville:<input type="text" name="txtCity[00]" id="txtCity00">Prénom: <input type="text" name="txtFirstName[00]" id="txtFirstName00">Nom:<input type="text" name="txtLastName[00]" id="txtLastName00">Numéro de portable:<input type="text" name="txtPhone[00]" id="txtPhone00">Prof ou élève:<input type="text" name="txtprof[00]" id="txtprof00"><br>
         Adresse:<input type="text" id="txtAddress01" name="txtAddress[01]">Code postal:<input type="text" id="txtNPA01" name="txtNPA[01]">Ville:<input type="text" name="txtCity[01]" id="txtCity01">Prénom: <input type="text" name="txtFirstName[01]" id="txtFirstName01">Nom:<input type="text" name="txtLastName[01]" id="txtLastName01">Numéro de portable:<input type="text" name="txtPhone[01]" id="txtPhone01">Prof ou élève:<input type="text" name="txtprof[01]" id="txtprof01"><br>
@@ -77,7 +77,7 @@ Cette page rassemble toutes les informations nécessaires pour l'organisation de
         Adresse:<input type="text" id="txtAddress48" name="txtAddress[48]">Code postal:<input type="text" id="txtNPA48" name="txtNPA[48]">Ville:<input type="text" name="txtCity[48]" id="txtCity48">Prénom: <input type="text" name="txtFirstName[48]" id="txtFirstName48">Nom:<input type="text" name="txtLastName[48]" id="txtLastName48">Numéro de portable:<input type="text" name="txtPhone[48]" id="txtPhone48">Prof ou élève:<input type="text" name="txtprof[48]" id="txtprof48"><br>
         Adresse:<input type="text" id="txtAddress49" name="txtAddress[49]">Code postal:<input type="text" id="txtNPA49" name="txtNPA[49]">Ville:<input type="text" name="txtCity[49]" id="txtCity49">Prénom: <input type="text" name="txtFirstName[49]" id="txtFirstName49">Nom:<input type="text" name="txtLastName[49]" id="txtLastName49">Numéro de portable:<input type="text" name="txtPhone[49]" id="txtPhone49">Prof ou élève:<input type="text" name="txtprof[49]" id="txtprof49"><br>
     </div>
-    <div class="d-none">
+    <div id="divTransports" class="d-none">
         Les transports:<br>
         Rendez-vous:<input type="text" name="txtMeeting[00]" id="txtMeeting00">Départ:<input type="text" name="txtStart[00]" id="txtStart00">Arrivée:<input type="text" name="txtEnd[00]" id="txtEnd00">Numéro de vol:<input type="text" name="txtFlight[00]" id="txtFlight00">Numéro de train:<input type="text" name="txtTrain[00]" id="txtTrain00">Numéro de bus:<input type="text" name="txtBus[00]" id="txtBus00">Prix:<input type="text" name="txtPrice[00]" id="txtPrice00"><br>
         Rendez-vous:<input type="text" name="txtMeeting[01]" id="txtMeeting01">Départ:<input type="text" name="txtStart[01]" id="txtStart01">Arrivée:<input type="text" name="txtEnd[01]" id="txtEnd01">Numéro de vol:<input type="text" name="txtFlight[01]" id="txtFlight01">Numéro de train:<input type="text" name="txtTrain[01]" id="txtTrain01">Numéro de bus:<input type="text" name="txtBus[01]" id="txtBus01">Prix:<input type="text" name="txtPrice[01]" id="txtPrice01"><br>
@@ -110,9 +110,10 @@ Cette page rassemble toutes les informations nécessaires pour l'organisation de
         Rendez-vous:<input type="text" name="txtMeeting[28]" id="txtMeeting28">Départ:<input type="text" name="txtStart[28]" id="txtStart28">Arrivée:<input type="text" name="txtEnd[28]" id="txtEnd28">Numéro de vol:<input type="text" name="txtFlight[28]" id="txtFlight28">Numéro de train:<input type="text" name="txtTrain[28]" id="txtTrain28">Numéro de bus:<input type="text" name="txtBus[28]" id="txtBus28">Prix:<input type="text" name="txtPrice[28]" id="txtPrice28"><br>
         Rendez-vous:<input type="text" name="txtMeeting[29]" id="txtMeeting29">Départ:<input type="text" name="txtStart[29]" id="txtStart29">Arrivée:<input type="text" name="txtEnd[29]" id="txtEnd29">Numéro de vol:<input type="text" name="txtFlight[29]" id="txtFlight29">Numéro de train:<input type="text" name="txtTrain[29]" id="txtTrain29">Numéro de bus:<input type="text" name="txtBus[29]" id="txtBus29">Prix:<input type="text" name="txtPrice[29]" id="txtPrice29"><br>
     </div>
-    <div class="d-none">
+    <div id="divLogements" class="d-none">
         Le logement:<br>
         Hotel: <input type="text" name="txtHotelData[00]" id="txtHotelData00"><br>
+        <img src="php/pictures/Hotel/hotel-none.png" id="imgHotelNone"><br>
         Adresse: <input type="text" name="txtHotelData[01]" id="txtHotelData01"><br>
         NPA: <input type="text" name="txtHotelData[02]" id="txtHotelData02"><br>
         City: <input type="text" name="txtHotelData[03]" id="txtHotelData03"><br>
@@ -134,7 +135,7 @@ Cette page rassemble toutes les informations nécessaires pour l'organisation de
         Chambre:<input type="text" name="txtRoom[13]" id="txtRoom13">Etage:<input type="text" name="txtFloor[13]" id="txtFloor13">Max personnes:<input type="text" name="txtCapacity[13]" id="txtCapacity13">Occupant1:<input type="text" name="txtOcc1[13]" id="txtOcc113">Occupant2:<input type="text" name="txtOcc2[13]" id="txtOcc213">Occupant3:<input type="text" name="txtOcc3[13]" id="txtOcc313">Occupant4:<input type="text" name="txtOcc4[13]" id="txtOcc413"><br>
         Chambre:<input type="text" name="txtRoom[14]" id="txtRoom14">Etage:<input type="text" name="txtFloor[14]" id="txtFloor14">Max personnes:<input type="text" name="txtCapacity[14]" id="txtCapacity14">Occupant1:<input type="text" name="txtOcc1[14]" id="txtOcc114">Occupant2:<input type="text" name="txtOcc2[14]" id="txtOcc214">Occupant3:<input type="text" name="txtOcc3[14]" id="txtOcc314">Occupant4:<input type="text" name="txtOcc4[14]" id="txtOcc414"><br>
     </div>
-    <div class="d-none">
+    <div id="divActivites" class="d-none">
         Les activités sur place<br>
         Titre:<input type="text" name="txtTitle[00]" id="txtTitle00">Description:<textarea name="txtDesc[00]" id="txtDesc00"></textarea>Date:<input type="text" name="txtActDate[00]" id="txtActDate00">Heure:<input type="text" name="txtActTime[00]" id="txtActTime00">Prix:<input type="text" name="txtActPrice[00]" id="txtActPrice00">Transport:<input type="text" name="txtActTrsp[00]" id="txtActTrsp00">Rendez-vous:<input type="text" name="txtRDV[00]" id="txtRDV00">Image:<input type="text" name="txtActImg[00]" id="txtActImg00"><img id="imgActImg00" class="actimg" /><br>
         Titre:<input type="text" name="txtTitle[01]" id="txtTitle01">Description:<textarea name="txtDesc[01]" id="txtDesc01"></textarea>Date:<input type="text" name="txtActDate[01]" id="txtActDate01">Heure:<input type="text" name="txtActTime[01]" id="txtActTime01">Prix:<input type="text" name="txtActPrice[01]" id="txtActPrice01">Transport:<input type="text" name="txtActTrsp[01]" id="txtActTrsp01">Rendez-vous:<input type="text" name="txtRDV[01]" id="txtRDV01">Image:<input type="text" name="txtActImg[01]" id="txtActImg01"><img id="imgActImg01" class="actimg" /><br>
